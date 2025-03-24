@@ -6,7 +6,7 @@ function ImageGenerator() {
 
     const generateImage = async () => {
         try {
-            const response = await fetch(`https://springai-production.up.railway.app//generate-images?prompt=${prompt}`)
+            const response = await fetch(`https://springai-production.up.railway.app/generate-images?prompt=${prompt}`)
             const urls = await response.json();
             console.log(urls);
             setImageUrls(urls);
