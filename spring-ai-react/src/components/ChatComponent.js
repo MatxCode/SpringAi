@@ -6,7 +6,7 @@ function ChatComponent() {
 
     const askAI = async () => {
         try {
-            const response = await fetch(`https://springai.up.railway.app/ask-ai?prompt=${prompt}`)
+            const response = await fetch(`https://springai-production.up.railway.app//ask-ai?prompt=${prompt}`)
             const data = await response.text();
             console.log(data);
             setChatResponse(data);

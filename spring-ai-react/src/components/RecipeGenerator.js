@@ -8,7 +8,7 @@ function RecipeGenerator() {
 
     const createRecipe = async () => {
         try {
-            const response = await fetch(`https://springai.up.railway.app/recipe-creator?ingredients=${ingredients}&dietaryRestrictions=${dietaryRestrictions}&cuisine=${cuisine}`)
+            const response = await fetch(`https://springai-production.up.railway.app//recipe-creator?ingredients=${ingredients}&dietaryRestrictions=${dietaryRestrictions}&cuisine=${cuisine}`)
             const data = await response.text();
             console.log(data);
             setRecipe(data);
