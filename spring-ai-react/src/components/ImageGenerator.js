@@ -6,7 +6,7 @@ function ImageGenerator() {
 
     const generateImage = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/generate-images?prompt=${prompt}`)
+            const response = await fetch(`https://spring-ai-sand.vercel.app/generate-images?prompt=${prompt}`)
             const urls = await response.json();
             console.log(urls);
             setImageUrls(urls);

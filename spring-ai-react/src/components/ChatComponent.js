@@ -6,7 +6,7 @@ function ChatComponent() {
 
     const askAI = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/ask-ai?prompt=${prompt}`)
+            const response = await fetch(`https://spring-ai-sand.vercel.app/ask-ai?prompt=${prompt}`)
             const data = await response.text();
             console.log(data);
             setChatResponse(data);

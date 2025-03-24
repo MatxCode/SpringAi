@@ -8,7 +8,7 @@ function RecipeGenerator() {
 
     const createRecipe = async () => {
         try {
-            const response = await fetch(`http://localhost:8080/recipe-creator?ingredients=${ingredients}&dietaryRestrictions=${dietaryRestrictions}&cuisine=${cuisine}`)
+            const response = await fetch(`https://spring-ai-sand.vercel.app/recipe-creator?ingredients=${ingredients}&dietaryRestrictions=${dietaryRestrictions}&cuisine=${cuisine}`)
             const data = await response.text();
             console.log(data);
             setRecipe(data);
